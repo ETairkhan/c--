@@ -1,11 +1,23 @@
 #include <iostream>
 using namespace std;
 
-int main(){
-    int Enter{};
-    cout<<"Enter an integer: ";
-    cin >> Enter;
-    cout << "Double " << Enter<<" is:" << Enter*2 << '\n';
-    cout << "Triple " << Enter<<" is:" << Enter*3 << '\n';
-    return 0;
+int getValueFromUser()
+{
+ 	std::cout << "Enter an integer: ";
+	int input{};
+	std::cin >> input;
+
+	return input;
+}
+
+void printDouble(int value) // This function now has an integer parameter
+{
+	std::cout << value << " doubled is: " << value * 2 << '\n';
+}
+
+int main()
+{
+	printDouble(getValueFromUser());
+
+	return 0;
 }
