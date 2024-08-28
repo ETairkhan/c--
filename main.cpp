@@ -1,23 +1,26 @@
 #include <iostream>
 using namespace std;
 
-int getValueFromUser()
-{
- 	std::cout << "Enter an integer: ";
-	int input{};
-	std::cin >> input;
 
-	return input;
-}
-
-void printDouble(int value) // This function now has an integer parameter
+void doIt(int x)
 {
-	std::cout << value << " doubled is: " << value * 2 << '\n'; //comment
+    int y{ 4 };
+    std::cout << "doIt: x = " << x << " y = " << y << '\n';
+
+    x = 3;
+    std::cout << "doIt: x = " << x << " y = " << y << '\n';
 }
 
 int main()
 {
-	printDouble(getValueFromUser());
+    int x{ 1 };
+    int y{ 2 };
 
-	return 0;
+    std::cout << "main: x = " << x << " y = " << y << '\n';
+
+    doIt(x);
+
+    std::cout << "main: x = " << x << " y = " << y << '\n';
+
+    return 0;
 }
