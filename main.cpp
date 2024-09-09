@@ -23,4 +23,5 @@ int main()
     std::cout << "main: x = " << x << " y = " << y << '\n';
 
     return 0;
+    cout << "ya sdelal clone c++ in another laptop";
 }
