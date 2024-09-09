@@ -24,4 +24,5 @@ int main()
 
     return 0;
     cout << "ya sdelal clone c++ in another laptop";
+    cout << " vse norm? ";
 }
