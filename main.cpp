@@ -1,28 +1,30 @@
 #include <iostream>
+#include <cmath>
+
 using namespace std;
 
+int main() {
+    int n;
+    cin >> n;
+    
+    int heights[100];
+   
+    for (int i = 0; i < n; ++i) {
+        cin >> heights[i];
+    }
+    
+    int min_diff = abs(heights[0] - heights[n - 1]); 
+    int soldier1 = 1, soldier2 = n;
+    for (int i = 0; i < n - 1; ++i) {
+        int diff = abs(heights[i] - heights[i + 1]);
+        if (diff < min_diff) {
+            min_diff = diff;
+            soldier1 = i + 1; 
+            soldier2 = i + 2; 
+        }
+    }
 
-void doIt(int x)
-{
-    int y{ 4 };
-    std::cout << "doIt: x = " << x << " y = " << y << '\n';
-
-    x = 3;
-    std::cout << "doIt: x = " << x << " y = " << y << '\n';
-}
-
-int main()
-{
-    int x{ 1 };
-    int y{ 2 };
-
-    std::cout << "main: x = " << x << " y = " << y << '\n';
-
-    doIt(x);
-
-    std::cout << "main: x = " << x << " y = " << y << '\n';
-
+    cout << soldier1 << " " << soldier2 << endl;
+    
     return 0;
-    cout << "ya sdelal clone c++ in another laptop";
-    cout << " vse norm? ";
 }
